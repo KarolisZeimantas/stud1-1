@@ -1,14 +1,14 @@
 # 2.1.1
  Pakeistos structūros į klases, ir skaičiuojami greičio skirtumai naudojant skirtingus kompiliavimo optimizavimo flags. tačiau neoptimizuotas struktūru paskirstymo metodas buvo vistiek greitesnis, negu klasių.
  
-| Vector laikai| | flag | 
-|---|---|---|
-| 100000 Neopt: 0.083761s| Opt: 0.013155s | -01| 
-| 1000000 Neopt: 0.840208s | Opt: 0.138063s | -01| 
-| 100000 Neopt: 0.021991s | Opt: 0.001465s | -02|
-| 1000000 Neopt:  0.233086s | Opt: 0.015562s | -02| 
-| 100000 Neopt: 0.020488s | Opt: 0.001936s | -03|
-| 1000000 Neopt: 0.213662s | Opt: 0.015906s | -03|
+| parametrai | klasių laikai|  | struktūrų laikai  | |  
+|---|---|---|---| --- | 
+| -01 100000 | Neopt: 0.083761s| Opt: 0.013155s | neopt: 0.037674s | Opt:  0.010598s |  
+| -01 1000000 | Neopt: 0.840208s | Opt: 0.138063s | neopt: 0.037336s | Opt:  0.106325s  |  
+| -02 100000 | Neopt: 0.021991s | Opt: 0.001465s | neopt: 0.042979s | Opt: 0.010496s |  
+| -02 1000000 | Neopt:  0.233086s | Opt: 0.015562s | neopt: 0.450876s | Opt:  0.105404s |  
+| -03 100000 | Neopt: 0.020488s | Opt: 0.001936s | neopt: 0.008548s | Opt: 0.001569s |  
+| -03 1000000 | Neopt: 0.213662s | Opt: 0.015906s | neopt: 0.042979s | Opt: 0.015402s |  
 
 
 # 2.1
