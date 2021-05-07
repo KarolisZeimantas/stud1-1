@@ -39,33 +39,42 @@ using std::deque;
 using std::string;
 using std::list;
 
-struct Students{
+class Students{
+    private:
     std::string names;
     std::string lastNames;
     float vid;
     float med=0;
     float egzaminas;
-    
-    
-    Students(string names, string lastNames,float vid, float med, float egzaminas): names(names), lastNames(lastNames),vid(vid),med(med),egzaminas(egzaminas){
+    public:
 
-    }
-    Students(const Students& student): names(student.names), lastNames(student.lastNames), vid(student.vid), med(student.med), egzaminas(student.egzaminas){
+    void setName(string names){ this->names = names;}
+    void  setLastName(string lastNames){this->lastNames = lastNames;}
+    void setVid(float vid){this->vid = vid;}
+    void setMed(float med){this->med = med;}
+    void setEgzam(float egzaminas){this->egzaminas = egzaminas;}
 
-    }
+    string getName(){ return names;}
+    string getLastName(){return lastNames;}
+    float getVid(){return vid;}
+    float getMed(){return med;}
+    float getEgzam(){return egzaminas;}
+
+    // Students(string names, string lastNames,float vid, float med, float egzaminas): names(names), lastNames(lastNames),vid(vid),med(med),egzaminas(egzaminas){
+
+    // }
+    // Students(const Students& student): names(student.names), lastNames(student.lastNames), vid(student.vid), med(student.med), egzaminas(student.egzaminas){
+
+    // }
     bool operator()(Students const & a, Students const & b) const
         {
         return a.vid <b.vid;
         }
 };
-void createList();
-void createDeque();
 void createFiles();
 void createVector();
 bool checkForDigit(std::string digit);
-bool sorter(Students const &lhs, Students const &rhs);
 double round2(double vid);
-bool sortList(Students const &a, Students const &b);
 
 
 
