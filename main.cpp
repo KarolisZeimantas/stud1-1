@@ -5,11 +5,12 @@ void createFiles(){
     double tempvid = 0, gradeNR = 0;
     vector<float> grades;
     string temp, firstLine;
+    std::vector<Students> varg, kiet, tempStud;
     int x = 100000;
     srand(time(NULL));
     string tempSS;
     steady_clock::time_point t1 = steady_clock::now();
- for (int i = 0; i < 2; i++)
+ for (int i = 3; i < 5; i++)
     {
        // cout<<i;
         std::ofstream fout(".\\files\\failas" + std::to_string(x) + ".txt");
@@ -40,11 +41,15 @@ void createFiles(){
 
 }
 int main(){
-    createFiles();
-     cout<<"=============Vector============="<<endl;
-     createVector();
-   
+   createFiles();
+    cout<<"=============Vector============="<<endl;
+   createVector();
+  //  cout<<"=============List============="<<endl;
+ // createList();
+    //cout<<"=============Deque============="<<endl;
+
+   // createDeque();
+    
     
 }
-
 
