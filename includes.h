@@ -47,30 +47,61 @@ class Students{
     float med=0;
     float egzaminas;
     public:
-
     void setName(string names){ this->names = names;}
     void  setLastName(string lastNames){this->lastNames = lastNames;}
     void setVid(float vid){this->vid = vid;}
     void setMed(float med){this->med = med;}
     void setEgzam(float egzaminas){this->egzaminas = egzaminas;}
-
+    
     string getName(){ return names;}
     string getLastName(){return lastNames;}
     float getVid(){return vid;}
     float getMed(){return med;}
     float getEgzam(){return egzaminas;}
-
-    // Students(string names, string lastNames,float vid, float med, float egzaminas): names(names), lastNames(lastNames),vid(vid),med(med),egzaminas(egzaminas){
-
+    
+    // bool operator()(Students const & a, Students const & b) const
+    //     {
+    //     return a.vid <b.vid;
+    //     }
+    Students(string name, string lastName, float vid ,float med,float egzaminas){
+        this->names = name;
+        this-> lastNames = lastName;
+        this->vid = vid;
+        this->med = med;
+        this->egzaminas = egzaminas;
+    }
+    // Students(const Students &stud1){
+    //     this->names = stud1.names;
+    //     this-> lastNames = stud1.lastNames;
+    //     this->vid = stud1.vid;
+    //     this->med = stud1.med;
+    //     this->egzaminas = stud1.egzaminas;
     // }
-    // Students(const Students& student): names(student.names), lastNames(student.lastNames), vid(student.vid), med(student.med), egzaminas(student.egzaminas){
+    
 
-    // }
-    bool operator()(Students const & a, Students const & b) const
-        {
-        return a.vid <b.vid;
-        }
+    Students(const Students& student): names(student.names), lastNames(student.lastNames), vid(student.vid), med(student.med), egzaminas(student.egzaminas){
+        
+    }
+    Students& operator = (const Students& that){
+    names = that.names;
+    lastNames = that.lastNames;
+    vid = that.vid;
+    med = that.med;
+    egzaminas = that.egzaminas;
+    return *this;
+    }
+
+    ~Students(){}
+
+
 };
+// class Students : public virtual Stud {
+//     Students(string name,string lastName,float  vi,me,egz)
+
+
+// };
+
+
 void createFiles();
 void createVector();
 bool checkForDigit(std::string digit);
