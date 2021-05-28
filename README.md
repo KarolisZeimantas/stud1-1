@@ -1,3 +1,7 @@
+# 2.1.2
+ Sūkurta bazinė klasė bei derived klasė.
+
+
 # 2.1.1
  Pakeistos structūros į klases, ir skaičiuojami greičio skirtumai naudojant skirtingus kompiliavimo optimizavimo flags. tačiau neoptimizuotas struktūru paskirstymo metodas buvo vistiek greitesnis, negu klasių.
  
